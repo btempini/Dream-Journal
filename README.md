@@ -6,21 +6,21 @@
 
 #### [Description](#description)
 
-#### [Installation](#installation)
+#### [Criteria](#criteria)
 
 #### [Usage](#usage)
 
 #### [Contributing](#contributing)
 
-#### [Tests](#tests)
+#### [Features](#features)
 
-#### [Questions](#questions)
+#### [URL](#url)
 
 ## Description:
 
 Allows one to record dreams and or nightmares.
 
-## Acceptance Criteria:
+## Criteria:
 
 GIVEN
 WHEN
@@ -42,4 +42,8 @@ Maximilian Gibes: https://github.com/Slimshady079
 
 ## Features:
 
-## Application URL:
+    -
+    -
+    -
+
+## URL:
