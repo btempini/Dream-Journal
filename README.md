@@ -22,7 +22,7 @@ Allows one to record dreams and or nightmares.
 
 ## Acceptance Criteria:
 
-GIVEN 
+GIVEN
 WHEN
 THEN
 WHEN
@@ -36,10 +36,10 @@ If you ever need help recalling dream, or you want to share them with someone. Y
 
 Bryan Tempini: https://github.com/btempini
 Marcelo Perez: https://github.com/mandresp
-Omar:
-Muhammet Toklu:
-Maximilian Gibes: https://github.com/Slimshady079.
+Omar Yassine: https://github.com/oyassine1999
+Muhammet Toklu: https://github.com/mramazant
+Maximilian Gibes: https://github.com/Slimshady079
 
-## Features: 
+## Features:
 
-## Application URL: 
+## Application URL:
