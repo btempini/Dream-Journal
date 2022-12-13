@@ -1,5 +1,5 @@
-const { Model, DataTypes } = require('sequelize');
-const sequelize = require('../config/connection');
+const { Model, DataTypes } = require("sequelize");
+const sequelize = require("../config/connection");
 
 class Dream extends Model {}
 
@@ -16,7 +16,7 @@ Dream.init(
       allowNull: false,
     },
     description: {
-      type: DataTypes.STRING,
+      type: DataTypes.TEXT,
       allowNull: false,
     },
     date: {
@@ -32,7 +32,7 @@ Dream.init(
     sequelize,
     freezeTableName: true,
     underscored: true,
-    modelName: 'dream',
+    modelName: "dream",
   }
 );
 
