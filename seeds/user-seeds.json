@@ -1,9 +1,23 @@
 [
-    {
-        "first_name": "Maximilian",
-        "last_name": "Gibes",
-        "email": "maximiliangibes@gmail.com",
-        "username": "Slimshady079",
-        "password": "guest"
-    }
+  {
+    "first_name": "Maximilian",
+    "last_name": "Gibes",
+    "email": "maximiliangibes@gmail.com",
+    "username": "Slimshady079",
+    "password": "guest1234"
+  },
+  {
+    "first_name": "Bryan",
+    "last_name": "Tempini",
+    "email": "mistatempini@gmail.com",
+    "username": "btempini",
+    "password": "guest1234"
+  },
+  {
+    "first_name": "Shaun",
+    "last_name": "White",
+    "email": "white@gmail.com",
+    "username": "password",
+    "password": "guest1234"
+  }
 ]

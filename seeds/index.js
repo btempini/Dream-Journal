@@ -21,10 +21,14 @@ const nightmareDatabase = async () => {
 };
 
 const userDatabase = async () => {
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
+  for (const user of userData) {
+    await User.create(user);
+  }
+
+  // await User.bulkCreate(userData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
 };
 
 const seedAll = async () => {

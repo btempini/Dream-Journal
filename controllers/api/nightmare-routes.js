@@ -2,7 +2,7 @@ const router = require("express").Router();
 const { Nightmare, User } = require("../../models");
 
 router.get("/", async (req, res) => {
-  const nightmareData = await Dream.findAll();
+  const nightmareData = await Nightmare.findAll();
   res.json(nightmareData);
 });
 
