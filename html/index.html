@@ -55,12 +55,22 @@
                     signup:
                 </h2>
                 <form action="signup.php" method="post">
+                    <label for="first_name"><b>first_name:</b></label>
+                    <input type="text" placeholder="enter first_name" name="first_name" required>
+                
+                    <label for="last_name"><b>last_name:</b></label>
+                    <input type="text" placeholder="enter last_name" name="last_name" required>
+                
+                    <label for="email"><b>email_address:</b></label>
+                    <input type="email" placeholder="enter email_address" name="email" required>
+                
                     <label for="username"><b>username:</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-            
+                    <input type="text" placeholder="enter username" name="username" required>
+                
                     <label for="password"><b>password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                    <input type="submit" name="submit-btn">
+                    <input type="password" placeholder="enter password" name="password" required>
+                
+                    <input type="submit" name="signup-btn">
                 </form>
             </aside>
             <section class="posts col-10 border-left border-right">

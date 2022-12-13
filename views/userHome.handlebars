@@ -1,0 +1,62 @@
+<div class="row">
+    <aside class="userView col-2">
+        <h2>
+            my dreams:
+        </h2>
+        <ul>
+            {{!-- we need a function to generate the dreams based on used id matching the logged in user --}}
+        </ul>
+    </aside>
+    <section class="posts col-8 border-left border-right">
+        <h2>
+            recent dreams:
+        </h2>
+        <ul>
+            {{#each dream}}
+            <li>
+                <h3>
+                    {{title}}
+                </h3>
+                <h4>
+                    {{date}}
+                </h4>
+                <p>
+                    {{description}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+        <h2 class="mt-2">
+            recent nightmares:
+        </h2>
+        <ul>
+            {{#each nightmare}}
+            <li>
+                <h3>
+                    {{title}}
+                </h3>
+                <h4>
+                    {{date}}
+                </h4>
+                <p>
+                    {{description}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+    <aside class="usersView col-2">
+        <h2>
+            swimming in the stream:
+        </h2>
+        <ul>
+            {{#each user}}
+            <li>
+                <p>
+                    {{username}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+    </aside>
+</div>
