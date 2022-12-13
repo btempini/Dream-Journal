@@ -1,0 +1,75 @@
+<div class="row">
+    <aside class="login col-2">
+        <h2>
+            login:
+        </h2>
+        <form action="login.php" method="post">
+            <label for="username"><b>username:</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+            <input type="submit" name="login-btn">
+        </form>
+        <h2 class="mt-5">
+            signup:
+        </h2>
+        <form action="signup.php" method="post">
+            <label for="first_name"><b>first_name:</b></label>
+            <input type="text" placeholder="enter first_name" name="first_name" required>
+            
+            <label for="last_name"><b>last_name:</b></label>
+            <input type="text" placeholder="enter last_name" name="last_name" required>
+            
+            <label for="email"><b>email@:</b></label>
+            <input type="email" placeholder="enter email@" name="email" required>
+
+            <label for="username"><b>username:</b></label>
+            <input type="text" placeholder="Enter Username" name="username" required>
+
+            <label for="password"><b>password:</b></label>
+            <input type="password" placeholder="Enter Password" name="password" required>
+
+            <input type="submit" name="signup-btn">
+        </form>
+    </aside>
+    <section class="posts col-10 border-left border-right">
+        <h2>
+            recent dreams:
+        </h2>
+        <ul>
+            {{#each dream}}
+            <li>
+                <h3>
+                    {{title}}
+                </h3>
+                <h4>
+                    {{date}}
+                </h4>
+                <p>
+                    {{description}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+        <h2 class="mt-2">
+            recent nightmares:
+        </h2>
+        <ul>
+            {{#each nigthmare}}
+            <li>
+                <h3>
+                    {{title}}
+                </h3>
+                <h4>
+                    {{date}}
+                </h4>
+                <p>
+                    {{description}}
+                </p>
+            </li>
+            {{/each}}
+        </ul>
+    </section>
+</div>
+</main>
