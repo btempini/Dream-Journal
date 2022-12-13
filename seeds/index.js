@@ -24,11 +24,6 @@ const userDatabase = async () => {
   for (const user of userData) {
     await User.create(user);
   }
-
-  // await User.bulkCreate(userData, {
-  //   individualHooks: true,
-  //   returning: true,
-  // });
 };
 
 const seedAll = async () => {
