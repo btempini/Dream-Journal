@@ -7,36 +7,36 @@ const dreamData = require("./dream-seeds.json");
 const userData = require("./user-seeds.json");
 
 const dreamDatabase = async () => {
-  await sequelize.sync({ force: true });
-
   await Dream.bulkCreate(dreamData, {
     individualHooks: true,
     returning: true,
   });
-
-  process.exit(0);
 };
-const nightmareDatabase = async () => {
-  await sequelize.sync({ force: true });
 
+const nightmareDatabase = async () => {
   await Nightmare.bulkCreate(nightmareData, {
     individualHooks: true,
     returning: true,
   });
-
-  process.exit(0);
 };
+
 const userDatabase = async () => {
+  for (const user of userData) {
+    await User.create(user);
+  }
+
+  // await User.bulkCreate(userData, {
+  //   individualHooks: true,
+  //   returning: true,
+  // });
+};
+
+const seedAll = async () => {
   await sequelize.sync({ force: true });
-
-  await User.bulkCreate(userData, {
-    individualHooks: true,
-    returning: true,
-  });
-
+  await userDatabase();
+  await dreamDatabase();
+  await nightmareDatabase();
   process.exit(0);
 };
 
-dreamDatabase();
-nightmareDatabase();
-userDatabase();
+seedAll();
