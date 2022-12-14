@@ -1,14 +1,28 @@
+const express = require("express");
 const router = require("express").Router();
 const { Dream, User } = require("../../models");
+const getDream = require("../../public/js/post");
+
+router.get("/", async (req, res, next) => {
+  try{
+    res.json(await post.getDreams());
+    console.log(res)
+  } catch (err) {
+    console.error("Error", err.message);
+    next(err);
+  }
+  
+});
+
 
 router.get("/", async (req, res) => {
-  const dreamsData = await User.findOne({
-    where: {
-      id: req.session.user_id,
-    },
-    include: [{ model: Dream }],
-  });
-  res.render("postPage");
+ const dreamsData = await User.findOne({
+   where: {
+     id: req.session.user_id,
+   },
+   include: [{ model: Dream }],
+ });
+ res.render("postPage");
 });
 
 router.post("/", async (req, res) => {

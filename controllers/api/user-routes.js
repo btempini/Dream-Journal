@@ -1,5 +1,18 @@
+const express = require("express");
 const router = require("express").Router();
 const { User, Dream, Nightmare } = require("../../models");
+const getUserData = require("../../public/js/login");
+
+router.get("/", async (req, res, next) => {
+  try{
+    res.json(await login.getUserData());
+    console.log(res)
+  } catch (err) {
+    console.error("Error", err.message);
+    next(err);
+  }
+  
+});
 
 router.get("/", async (req, res) => {
   res.render("userHome");
