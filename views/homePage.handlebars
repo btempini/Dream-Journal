@@ -38,16 +38,16 @@
             recent dreams:
         </h2>
         <ul>
-            {{#each dream}}
+            {{#each dreamsData as |dream|}}
             <li>
                 <h3>
-                    {{title}}
+                    {{dataValues.title}}
                 </h3>
                 <h4>
-                    {{date}}
+                    {{dataValues.createdAt}}
                 </h4>
                 <p>
-                    {{description}}
+                    {{dataValues.description}}
                 </p>
             </li>
             {{/each}}
@@ -56,16 +56,16 @@
             recent nightmares:
         </h2>
         <ul>
-            {{#each nigthmare}}
+            {{#each nightmareData as |nightmare|}}
             <li>
                 <h3>
-                    {{title}}
+                    {{dataValues.title}}
                 </h3>
                 <h4>
-                    {{date}}
+                    {{dataValues.createdAt}}
                 </h4>
                 <p>
-                    {{description}}
+                    {{dataValues.description}}
                 </p>
             </li>
             {{/each}}
