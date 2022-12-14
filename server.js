@@ -28,6 +28,8 @@ app.engine("handlebars", hbs.engine);
 // Allows us to view our engine
 app.set("view engine", "handlebars");
 
+app.use(express.static("./public"));
+
 app.use(session(sess));
 app.use(routes);
 
