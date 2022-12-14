@@ -8,7 +8,7 @@ router.get("/", async (req, res) => {
     },
     include: [{ model: Dream }],
   });
-  res.json(dreamsData);
+  res.render("postPage");
 });
 
 router.post("/", async (req, res) => {
