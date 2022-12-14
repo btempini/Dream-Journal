@@ -7,6 +7,7 @@ const SequelizeStore = require("connect-session-sequelize")(session.Store);
 const routes = require("./controllers");
 const sequelize = require("./config/connection");
 
+// Sets up the express App
 const app = express();
 const PORT = process.env.PORT || 3001;
 
@@ -21,7 +22,10 @@ const sess = {
 };
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
+
+// Telling express the templating engine we are going to use
 app.engine("handlebars", hbs.engine);
+// Allows us to view our engine
 app.set("view engine", "handlebars");
 
 app.use(session(sess));
