@@ -1,11 +1,11 @@
 const router = require("express").Router();
 const { Dream, User } = require("../../models");
-
+//get route /api/dream/
 router.get("/", async (req, res) => {
   const dreamsData = await Dream.findAll({ include: [{ model: User }] });
   res.json(dreamsData);
 });
-
+//post route /api/dream/
 router.post("/", async (req, res) => {
   try {
     const dreamPost = await Dream.create({
