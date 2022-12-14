@@ -17,7 +17,14 @@
     "first_name": "Shaun",
     "last_name": "White",
     "email": "white@gmail.com",
-    "username": "password",
+    "username": "flying tomatoe",
+    "password": "guest1234"
+  },
+  {
+    "first_name": "Boe",
+    "last_name": "Jengles",
+    "email": "jengles@gmail.com",
+    "username": "boejengles",
     "password": "guest1234"
   }
 ]
