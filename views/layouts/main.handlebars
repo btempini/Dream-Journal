@@ -26,12 +26,14 @@
 <body>
     <header class="nav flex-row bg-primary">
         <div class="d-flex align-items-center mt-4 mb-4">
-            <h1 class="ml-3">
-                dreamStream
-            </h1>
+            <a href="index.html" class="btn btn-primary">
+                <h1 class="ml-3 text-black">
+                    dreamStream
+                </h1>
+            </a>
         </div>
-        <div class="d-flex ml-4 mt-4 align-items-center">
-            <p class="text-white">login to float in the dreamStream~</p>
+        <div class="d-flex align-items-center ml-3 mt-2">
+            <a href="postPage.html" class="btn btn-primary">drop a dream in the stream</a>
         </div>
         <div class="d-flex align-items-center ml-auto mr-3">
             <label for="search" class="text-white align-items-center mr-2 mt-2"><b>sift through the stream:</b></label>
@@ -39,40 +41,7 @@
         </div>
     </header>
     <main class="container-fluid mt-4">
-        <div class="row">
-            <aside class="login col-2">
-                <h2>
-                    login:
-                </h2>
-                <form action="login.php" method="post">
-                    <label for="username"><b>username:</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-
-                    <label for="password"><b>password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                    <input type="submit" name="submit-btn">
-                </form>
-                <h2 class="mt-5">
-                    signup:
-                </h2>
-                <form action="signup.php" method="post">
-                    <label for="username"><b>username:</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-
-                    <label for="password"><b>password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
-                    <input type="submit" name="submit-btn">
-                </form>
-            </aside>
-            <section class="posts col-10 border-left border-right">
-                <h2>
-                    recent posts:
-                </h2>
-                <ul>
-
-                </ul>
-            </section>
-        </div>
+        {{{ body }}}
     </main>
 </body>
 
