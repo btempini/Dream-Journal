@@ -3,35 +3,35 @@
         <h2>
             login:
         </h2>
-        <form action="login.php" method="post">
-            <label for="username"><b>username:</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+        <div>
+            <label for="email"><b>email:</b></label>
+            <input id="loginEmail" type="text" placeholder="Enter email" name="email" required>
 
             <label for="password"><b>password:</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
-            <input type="submit" name="login-btn">
-        </form>
+            <input id="loginPassword" type="password" placeholder="Enter Password" name="password" required>
+            <input id="loginBtn" type="submit" name="login-btn">
+        </div>
         <h2 class="mt-5">
             signup:
         </h2>
-        <form action="signup.php" method="post">
+        <div action="/login" method="post">
             <label for="first_name"><b>first_name:</b></label>
-            <input type="text" placeholder="enter first_name" name="first_name" required>
+            <input id="signupFirstName" type="text" placeholder="enter first_name" name="first_name" required>
             
             <label for="last_name"><b>last_name:</b></label>
-            <input type="text" placeholder="enter last_name" name="last_name" required>
+            <input id="signupLastName" type="text" placeholder="enter last_name" name="last_name" required>
             
             <label for="email"><b>email@:</b></label>
-            <input type="email" placeholder="enter email@" name="email" required>
+            <input id="signupEmail" type="email" placeholder="enter email@" name="email" required>
 
             <label for="username"><b>username:</b></label>
-            <input type="text" placeholder="Enter Username" name="username" required>
+            <input id="signupUserName" type="text" placeholder="Enter Username" name="username" required>
 
             <label for="password"><b>password:</b></label>
-            <input type="password" placeholder="Enter Password" name="password" required>
+            <input id="signupPassword" type="password" placeholder="Enter Password" name="password" required>
 
-            <input type="submit" name="signup-btn">
-        </form>
+            <input id="signupBtn" type="submit" name="signup-btn">
+        </div>
     </aside>
     <section class="posts col-10 border-left border-right">
         <h2>
@@ -73,3 +73,5 @@
     </section>
 </div>
 </main>
+
+<script src="./js/login.js"></script>
