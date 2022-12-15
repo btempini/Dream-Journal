@@ -1,13 +1,29 @@
-const { user } = require("../../controllers/api/user-routes");
-// var postBtn = document.getElementById("postBtn");
-const db = require("../../controllers/api/user-routes")
+var loginBtn = document.getElementById("loginBtn");
+loginBtn.addEventListener("click", login);
 
-async function userLogin(){
-    const userData = await db.query("SELECT id, first_name, last_name, email, username, password FROM user");
+async function login(){
+    var loginEmail = document.getElementById("loginEmail");
+    var loginPassword = document.getElementById("loginPassword");
+    var email = loginEmail.value;
+    var password = loginPassword.value;
+    console.log(email, password);
 
-    return {
-        userData    
+if (email && password) {
+    // Send a POST request to the API endpoint
+    const response = await fetch('/login', {
+      method: 'POST',
+      body: JSON.stringify({ email, password }),
+      headers: { 'Content-Type': 'application/json' },
+    });
+
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
+      
+      console.log("loggedIn")
+      document.location.replace('/loggedIn');
+    } else {
+      alert(response.statusText);
     }
+  }
 }
 
-module.exports = {userLogin}
