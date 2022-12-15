@@ -1,15 +1,5 @@
 const router = require("express").Router();
 const { Dream, Nightmare, User } = require("../models");
-const getMethods = (obj) => {
-  let properties = new Set();
-  let currentObj = obj;
-  do {
-    Object.getOwnPropertyNames(currentObj).map((item) => properties.add(item));
-  } while ((currentObj = Object.getPrototypeOf(currentObj)));
-  return [...properties.keys()].filter(
-    (item) => typeof obj[item] === "function"
-  );
-};
 // const { compareSync } = require("bcrypt");
 
 // Get all dreams/nightmares for homepage
