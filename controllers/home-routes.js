@@ -44,21 +44,21 @@ router.get("/loggedIn", async (req, res) => {
   });
 });
 
-router.post("/", async (req, res) => {
+router.post("/signup", async (req, res) => {
   try {
+    console.log(req.body)
     const userData = await User.create(req.body);
 
-    req.session.save(() => {
-      req.session.user_id = userData.id;
-      req.session.logged_in = true;
-
+     req.session.save(() => {
+       req.session.user_id = userData.id;
+       req.session.logged_in = true;
+     })
       res.status(200).json(userData);
-    });
-  } catch (err) {
+    } catch (err) {
     res.status(400).json(err);
   }
 });
-
+//API login
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
@@ -89,7 +89,7 @@ router.post("/login", async (req, res) => {
     res.status(400).json(err);
   }
 });
-
+//API logout
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {
