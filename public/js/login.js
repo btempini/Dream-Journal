@@ -60,14 +60,14 @@ if (signFirstName && signLastName && signEmail &&
       headers: { 'Content-Type': 'application/json' },
     });
 
-    // if (response.ok) {
-    //   // If successful, redirect the browser to the profile page
+    if (response.ok) {
+      // If successful, redirect the browser to the profile page
       
-    //   console.log("SignUp is succesful")
-    //   document.location.replace('/loggedIn');
-    // } else {
-    //   alert(response.statusText);
-    // }
+      console.log("SignUp is succesful")
+      document.location.replace('/loggedIn');
+    } else {
+      alert(response.statusText);
+    }
   }
 }
 
