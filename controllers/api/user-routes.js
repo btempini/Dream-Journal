@@ -2,7 +2,18 @@ const router = require("express").Router();
 const { User, Dream, Nightmare } = require("../../models");
 
 router.get("/", async (req, res) => {
-  res.render("userHome");
+  const userDreamsData = await User.findOne({
+    where: { id: req.session.user_id },
+    include: [{ model: Dream }],
+  });
+  const userNightmareData = await User.findOne({
+    where: { id: req.session.user_id },
+    include: [{ model: Nightmare }],
+  });
+  console.log("=====================");
+  console.log(userDreamsData, userNightmareData);
+  console.log("=====================");
+  res.render("postPage", userDreamsData, userNightmareData);
 });
 
 router.post("/", async (req, res) => {
