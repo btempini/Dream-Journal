@@ -2,7 +2,6 @@ var loginBtn = document.getElementById("loginBtn");
 var signupBtn = document.getElementById("signupBtn");
 loginBtn.addEventListener("click", login);
 
-
 async function login(){
     var loginEmail = document.getElementById("loginEmail");
     var loginPassword = document.getElementById("loginPassword");
@@ -70,4 +69,3 @@ if (signFirstName && signLastName && signEmail &&
     }
   }
 }
-

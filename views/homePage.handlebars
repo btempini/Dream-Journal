@@ -1,45 +1,61 @@
 <div class="row">
-    <aside class="login col-2">
-        <h2>
-            login:
-        </h2>
-        <div>
-            <label for="email"><b>email:</b></label>
-            <input id="loginEmail" type="text" placeholder="Enter email" name="email" required>
-
-            <label for="password"><b>password:</b></label>
-            <input id="loginPassword" type="password" placeholder="Enter Password" name="password" required>
-            <input id="loginBtn" type="submit" name="login-btn">
+    <aside class="login col-2 bodyBackground mt-3">
+        <div action="/login" method="post">
+            <div class="item">
+                <h2 class="spray gray">
+                    login:
+                </h2>
+                <div>
+                    <label for="email"><b>email:</b></label>
+                    <input id="loginEmail" type="text" placeholder="enter email" name="email" required>
+                </div>
+                <div>
+                    <label for="password"><b>password:</b></label>
+                    <input id="loginPassword" type="password" placeholder="enter password" name="password" required>
+                </div>
+                <div>
+                    <input id="loginBtn" type="submit" name="submit-btn">
+                </div>
+            </div>
         </div>
-        <h2 class="mt-5">
-            signup:
-        </h2>
-        <div action="/signup" method="post">
-            <label for="first_name"><b>first_name:</b></label>
-            <input id="signupFirstName" type="text" placeholder="enter first_name" name="first_name" required>
-            
-            <label for="last_name"><b>last_name:</b></label>
-            <input id="signupLastName" type="text" placeholder="enter last_name" name="last_name" required>
-            
-            <label for="email"><b>email@:</b></label>
-            <input id="signupEmail" type="email" placeholder="enter email@" name="email" required>
-
-            <label for="username"><b>username:</b></label>
-            <input id="signupUserName" type="text" placeholder="Enter Username" name="username" required>
-
-            <label for="password"><b>password:</b></label>
-            <input id="signupPassword" type="password" placeholder="Enter Password" name="password" required>
-
-            <input id="signupBtn" type="submit" name="signup-btn">
+        <div class="item">
+            <h2 class="mt-5 spray gray">
+                signup:
+            </h2>
+            <div action="/signup" method="post">
+                <div>
+                    <label for="first_name"><b>firstname:</b></label>
+                    <input id="signupFirstName" type="text" placeholder="enter firstname" name="first_name" required>
+                </div>
+                <div>
+                    <label for="last_name"><b>lastname:</b></label>
+                    <input id="signupLastName" type="text" placeholder="enter lastname" name="last_name" required>
+                </div>
+                <div>
+                    <label for="email"><b>email:</b></label>
+                    <input id="signupEmail" type="email" placeholder="enter email" name="email" required>
+                </div>
+                <div>
+                    <label for="username"><b>username:</b></label>
+                    <input id="signupUserName" type="text" placeholder="enter username" name="username" required>
+                </div>
+                <div>
+                    <label for="password"><b>password:</b></label>
+                    <input id="signupPassword" type="password" placeholder="enter password" name="password" required>
+                </div>
+                <div>
+                    <input id="signupBtn" type="submit" name="signup-btn">
+                </div>
+            </div>
         </div>
     </aside>
-    <section class="posts col-10 border-left border-right">
-        <h2>
+    <section class="col-10 bodyBackground border-left border-right mt-3 box">
+        <h2 class="spray gray">
             recent dreams:
         </h2>
         <ul>
             {{#each dreamsData as |dream|}}
-            <li>
+            <li class="item">
                 <h3>
                     {{dataValues.title}}
                 </h3>
@@ -52,12 +68,12 @@
             </li>
             {{/each}}
         </ul>
-        <h2 class="mt-2">
+        <h2 class="mt-2 spray gray">
             recent nightmares:
         </h2>
         <ul>
             {{#each nightmareData as |nightmare|}}
-            <li>
+            <li >
                 <h3>
                     {{dataValues.title}}
                 </h3>
@@ -72,6 +88,5 @@
         </ul>
     </section>
 </div>
-</main>
 
 <script src="./js/login.js"></script>
