@@ -13,10 +13,30 @@
     <style>
         body {
             font-family: "Rubik", sans-serif;
+            background-color: #d3d3d3;
         }
-
-        h1 {
+        .wrapper {
+            min-height: calc(100vh - 50px);
+        }
+        .bodyBackground {
+            border: 10px solid #d3d3d3;
+            background-color: #d3d3d3;
+            border-style: solid;
+        }
+        .spray {
             font-family: "Rubik Spray Paint", sans-serif;
+        }
+        .gray {
+            color: #4E4F50;
+        }
+        .wrapper {
+            min-height: calc(35vh - 80px);
+        }
+        footer {
+            height: 80px;
+        }
+        .footerImg {
+            width: 50%;
         }
     </style>
     <title>dreamStream</title>
@@ -27,7 +47,7 @@
     <header class="nav flex-row bg-primary">
         <div class="d-flex align-items-center mt-4 mb-4">
             <a href="index.html" class="btn btn-primary">
-                <h1 class="ml-3 text-black">
+                <h1 class="ml-3 spray">
                     dreamStream
                 </h1>
             </a>
@@ -40,9 +60,18 @@
             <input type="text" name="search" placeholder="Search..">
         </div>
     </header>
-    <main class="container-fluid mt-4">
+    <main class="container-fluid">
         {{{ body }}}
     </main>
+    <div class="wrapper">
+        <h1></h1>
+    </div>
+    <footer class="container-fluid">
+        <div class="row imgWidth">
+            <img src="../Assets/river.gif" class="footerImg">
+            <img src="../Assets/river2.gif" class="footerImg">
+        </div>
+    </footer>
 </body>
 
 </html>

@@ -36,7 +36,9 @@ router.get("/loggedIn", async (req, res) => {
   });
   const dreamsData = await Dream.findAll();
   const nightmareData = await Nightmare.findAll();
+  const usersData = await User.findAll();
   res.render("userHome", {
+    usersData,
     userDreamsData,
     userNightmareData,
     dreamsData,

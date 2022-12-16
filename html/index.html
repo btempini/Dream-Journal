@@ -12,9 +12,30 @@
     <style>
         body {
             font-family: "Rubik", sans-serif;
+            background-color: #d3d3d3;
         }
-        h1 {
+        .wrapper {
+            min-height: calc(100vh - 50px);
+        }
+        .bodyBackground {
+            border: 10px solid #d3d3d3;
+            background-color: #d3d3d3;
+            border-style: solid;
+        }
+        .spray {
             font-family: "Rubik Spray Paint", sans-serif;
+        }
+        .gray {
+            color: #4E4F50;
+        }
+        .wrapper {
+            min-height: calc(35vh - 80px);
+        }
+        footer {
+            height: 80px;
+        }
+        .footerImg {
+            width: 50%;
         }
     </style>
     <title>dreamStream</title>
@@ -24,7 +45,7 @@
     <header class="nav flex-row bg-primary">
         <div class="d-flex align-items-center mt-4 mb-4">
             <a href="index.html" class="btn btn-primary">
-                <h1 class="ml-3 text-black">
+                <h1 class="ml-3 spray">
                     dreamStream
                 </h1>
             </a>
@@ -37,44 +58,53 @@
             <input type="text" name="search" placeholder="Search..">
         </div>
     </header>
-    <main class="container-fluid mt-4">
+    <main class="container-fluid">
         <div class="row">
-            <aside class="login col-2">
-                <h2>
+            <aside class="login col-2 bodyBackground">
+                <h2 class="spray gray">
                     login:
                 </h2>
                 <form action="login.php" method="post">
-                    <label for="username"><b>username:</b></label>
-                    <input type="text" placeholder="Enter Username" name="username" required>
-            
-                    <label for="password"><b>password:</b></label>
-                    <input type="password" placeholder="Enter Password" name="password" required>
+                    <div>
+                        <label for="username"><b>username:</b></label>
+                        <input type="text" placeholder="enter Username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password"><b>password:</b></label>
+                        <input type="password" placeholder="enter Password" name="password" required>
+                    </div>
                     <input type="submit" name="submit-btn">
                 </form>
-                <h2 class="mt-5">
+                <h2 class="mt-5 spray gray">
                     signup:
                 </h2>
                 <form action="signup.php" method="post">
-                    <label for="first_name"><b>first_name:</b></label>
-                    <input type="text" placeholder="enter first_name" name="first_name" required>
-                
-                    <label for="last_name"><b>last_name:</b></label>
-                    <input type="text" placeholder="enter last_name" name="last_name" required>
-                
-                    <label for="email"><b>email_address:</b></label>
-                    <input type="email" placeholder="enter email_address" name="email" required>
-                
-                    <label for="username"><b>username:</b></label>
-                    <input type="text" placeholder="enter username" name="username" required>
-                
-                    <label for="password"><b>password:</b></label>
-                    <input type="password" placeholder="enter password" name="password" required>
+                    <div>
+                        <label for="first_name"><b>first_name:</b></label>
+                        <input type="text" placeholder="enter first_name" name="first_name" required>
+                    </div>
+                    <div>
+                        <label for="last_name"><b>last_name:</b></label>
+                        <input type="text" placeholder="enter last_name" name="last_name" required>
+                    </div>
+                    <div>
+                        <label for="email"><b>email:</b></label>
+                        <input type="email" placeholder="enter email_address" name="email" required>
+                    </div>
+                    <div>
+                        <label for="username"><b>username:</b></label>
+                        <input type="text" placeholder="enter username" name="username" required>
+                    </div>
+                    <div>
+                        <label for="password"><b>password:</b></label>
+                        <input type="password" placeholder="enter password" name="password" required>
+                    </div>
                 
                     <input type="submit" name="signup-btn">
                 </form>
             </aside>
-            <section class="posts col-10 border-left border-right">
-                <h2>
+            <section class="posts col-10 bodyBackground">
+                <h2 class="spray gray">
                     recent posts:
                 </h2>
                 <ul>
@@ -83,5 +113,14 @@
             </section>
         </div>
     </main>
+    <div class="wrapper">
+        <h1></h1>
+    </div>
+    <footer class="container-fluid">
+        <div class="row imgWidth">
+            <img src="../Assets/river.gif" class="footerImg">
+            <img src="../Assets/river2.gif" class="footerImg">
+        </div>
+    </footer>
 </body>
 </html>

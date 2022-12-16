@@ -1,21 +1,16 @@
 <div class="row">
-  <aside class="userView col-2">
-    <h2>
+  <aside class="col-2">
+    <h2 class="bodyBackground spray gray">
       my dreams:
     </h2>
-    <ul>
-      {{! we need a function to generate the dreams based on used id matching the logged in user }}
       <ul>
         {{#each userDreamsData.dreams as |userDreams|}}
           <li>
-            <h3>
-              {{dataValues.title}}
-            </h3>
             <h4>
-              {{dataValues.createdAt}}
+              {{dataValues.title}}
             </h4>
             <p>
-              {{dataValues.description}}
+              {{dataValues.createdAt}}
             </p>
           </li>
         {{/each}}
@@ -24,56 +19,66 @@
       <ul>
         {{#each userNightmareData.nightmares as |userNightmare|}}
           <li>
-              <h3>
-                  {{dataValues.title}}
-              </h3>
-              <h4>
-                  {{dataValues.createdAt}}
-              </h4>
-              <p>
-                  {{dataValues.description}}
-              </p>
+            <h4>
+              {{dataValues.title}}
+            </h4>
+            <p>
+              {{dataValues.createdAt}}
+            </p>
           </li>
         {{/each}}
       </ul>
-    </ul>
   </aside>
-  <section class="posts col-8 border-left border-right">
-    <h2>
+  <section class="col-8 bodyBackground border-left border-right">
+    <h2 class="spray gray">
       recent dreams:
     </h2>
     <ul>
-            {{#each dreamsData as |dream|}}
-            <li>
-                <h3>
-                    {{dataValues.title}}
-                </h3>
-                <h4>
-                    {{dataValues.createdAt}}
-                </h4>
-                <p>
-                    {{dataValues.description}}
-                </p>
-            </li>
-            {{/each}}
-        </ul>
-        <h2 class="mt-2">
-            recent nightmares:
-        </h2>
-        <ul>
-            {{#each nightmareData as |nightmare|}}
-            <li>
-                <h3>
-                    {{dataValues.title}}
-                </h3>
-                <h4>
-                    {{dataValues.createdAt}}
-                </h4>
-                <p>
-                    {{dataValues.description}}
-                </p>
-            </li>
-            {{/each}}
-        </ul>
+      {{#each dreamsData as |dream|}}
+        <li>
+          <h3>
+            {{dataValues.title}}
+          </h3>
+          <h4>
+            {{dataValues.createdAt}}
+          </h4>
+          <p>
+            {{dataValues.description}}
+          </p>
+        </li>
+      {{/each}}
+    </ul>
+    <h2 class="mt-2 spray gray">
+      recent nightmares:
+    </h2>
+    <ul>
+      {{#each nightmareData as |nightmare|}}
+        <li>
+          <h3>
+            {{dataValues.title}}
+          </h3>
+          <h4>
+            {{dataValues.createdAt}}
+          </h4>
+          <p>
+            {{dataValues.description}}
+          </p>
+        </li>
+      {{/each}}
+    </ul>
+  </section>
+  <aside class="col-2 bodyBackground">
+    <h2 class="spray gray">
+      users:
+    </h2>
+    <ul>
+      {{#each usersData as |user|}}
+        <li>
+          <h4>
+            {{dataValues.username}}
+          </h4>
+        </li>
+      {{/each}}
+    </ul>
   </aside>
 </div>
