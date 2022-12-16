@@ -15,64 +15,25 @@
       rel="stylesheet"
     />
     <style>
-<<<<<<< HEAD
-      body { font-family: "Rubik", sans-serif; } h1 { font-family: "Rubik Spray
-      Paint", sans-serif; }
+      body { font-family: "Rubik", sans-serif; background-color: #d3d3d3;
+      position: relative; } .bodyBackground { border: 10px solid #d3d3d3;
+      background-color: #d3d3d3; border-style: solid; } .spray { font-family:
+      "Rubik Spray Paint", sans-serif; } .gray { color: #4E4F50; } footer {
+      position: fixed; bottom: 0; } .footerImg { width: 50%; } .box {
+      overflow-y: auto; height: 740px; } .item { border: 3px solid #757779;
+      border-radius: 5px; background-color: #ffffff; padding-left: 10px;
+      padding-right: 10px; padding-top: 10px; }
     </style>
     <title>dreamStream</title>
-    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico" />
+    <link rel="icon" type="image/x-icon" href="favicon.ico" />
   </head>
-=======
-        body {
-            font-family: "Rubik", sans-serif;
-            background-color: #d3d3d3;
-            position: relative;
-        }
-        .bodyBackground {
-            border: 10px solid #d3d3d3;
-            background-color: #d3d3d3;
-            border-style: solid;
-        }
-        .spray {
-            font-family: "Rubik Spray Paint", sans-serif;
-        }
-        .gray {
-            color: #4E4F50;
-        }
-        footer {
-            position: fixed;
-            bottom: 0;
-        }
-        .footerImg {
-            width: 50%;
-        }
-        .box {
-            overflow-y: auto;
-            height: 740px;
-        }
-        .item {
-            border: 3px solid #757779;
-            border-radius: 5px;
-            background-color: #ffffff;
-            padding-left: 10px;
-            padding-right: 10px;
-            padding-top: 10px;
-        }
-    </style>
-    <title>dreamStream</title>
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-</head>
->>>>>>> de1c318bb11b8e293bbe2b60e8e08870c53fe149
 
   <body>
     <header class="nav flex-row bg-primary">
-<<<<<<< HEAD
       <div class="d-flex align-items-center mt-4 mb-4">
-        <a href="/" class="btn btn-primary">
-          <h1 class="ml-3 text-black">
-            dreamStream
-          </h1>
-        </a>
+        <h1 class="ml-3 spray text-white">
+          dreamStream
+        </h1>
       </div>
       <div class="d-flex align-items-center ml-3 mt-2">
         <a href="/api/post" class="btn btn-primary">drop a dream in the stream</a>
@@ -83,37 +44,18 @@
         <input type="text" name="search" placeholder="Search.." />
       </div>
     </header>
-    <main class="container-fluid mt-4">
+    <main class="container-fluid">
       {{{body}}}
     </main>
-  </body>
-=======
-        <div class="d-flex align-items-center mt-4 mb-4">
-            <h1 class="ml-3 spray text-white">
-                dreamStream
-            </h1>
-        </div>
-        <div class="d-flex align-items-center ml-3 mt-2">
-            <a href="/api/post" class="btn btn-primary">drop a dream in the stream</a>
-        </div>
-        <div class="d-flex align-items-center ml-auto mr-3">
-            <label for="search" class="text-white align-items-center mr-2 mt-2"><b>sift through the stream:</b></label>
-            <input type="text" name="search" placeholder="Search..">
-        </div>
-    </header>
-    <main class="container-fluid">
-        {{{ body }}}
-    </main>
     <footer class="container-fluid">
-        <div class="row">
-            <img src="river.gif" class="footerImg">
-            <img src="river2.gif" class="footerImg">
-        </div>
+      <div class="row">
+        <img src="river.gif" class="footerImg" />
+        <img src="river2.gif" class="footerImg" />
+      </div>
     </footer>
     <script src="/public/js/post.js"></script>
     <script src="/public/js/login.js"></script>
     <script src="anime.min.js"></script>
-</body>
->>>>>>> de1c318bb11b8e293bbe2b60e8e08870c53fe149
+  </body>
 
 </html>
