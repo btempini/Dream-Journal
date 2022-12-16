@@ -1,19 +1,7 @@
 const router = require("express").Router();
-const { Dream, Nightmare, User } = require("../models");
-// const { compareSync } = require("bcrypt");
-
-// Get all dreams/nightmares for homepage
+const { User, Dream, Nightmare } = require("../../models");
 
 router.get("/", async (req, res) => {
-  const dreamsData = await Dream.findAll();
-  const nightmareData = await Nightmare.findAll();
-
-  res.render("homePage", { dreamsData, nightmareData });
-});
-
-// After login display user dreams + nightmares on left sidebar
-
-router.get("/loggedIn", async (req, res) => {
   const userDreamsData = await User.findOne({
     where: { id: req.session.user_id },
     include: [{ model: Dream }],
@@ -22,51 +10,43 @@ router.get("/loggedIn", async (req, res) => {
     where: { id: req.session.user_id },
     include: [{ model: Nightmare }],
   });
-  const dreamsData = await Dream.findAll();
-  const nightmareData = await Nightmare.findAll();
-  const usersData = await User.findAll();
   console.log("=====================");
-  console.log(dreamsData);
+  console.log(userDreamsData, userNightmareData);
   console.log("=====================");
-  res.render("userHome", {
-    usersData,
-    userDreamsData,
-    userNightmareData,
-    dreamsData,
-    nightmareData,
-  });
+  res.render("postPage", userDreamsData, userNightmareData);
 });
 
-router.post("/signup", async (req, res) => {
+router.post("/", async (req, res) => {
   try {
-    console.log(req.body);
     const userData = await User.create(req.body);
 
     req.session.save(() => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
+
+      res.status(200).json(userData);
     });
-    res.status(200).json(userData);
   } catch (err) {
     res.status(400).json(err);
   }
 });
-//API login
+
 router.post("/login", async (req, res) => {
   try {
     const userData = await User.findOne({ where: { email: req.body.email } });
 
     if (!userData) {
       res
-        .status(403)
+        .status(400)
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
+
     const validPassword = await userData.checkPassword(req.body.password);
 
     if (!validPassword) {
       res
-        .status(403)
+        .status(400)
         .json({ message: "Incorrect email or password, please try again" });
       return;
     }
@@ -78,11 +58,10 @@ router.post("/login", async (req, res) => {
       res.json({ user: userData, message: "You are now logged in!" });
     });
   } catch (err) {
-    console.log(err);
     res.status(400).json(err);
   }
 });
-//API logout
+
 router.post("/logout", (req, res) => {
   if (req.session.logged_in) {
     req.session.destroy(() => {

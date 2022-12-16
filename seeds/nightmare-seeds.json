@@ -8,5 +8,25 @@
     "title": "Lucid Nightmare",
     "description": "I was sleep walking in this nightmare and couldnt wake up as an intruder came in through the window and started stabbing the wall. It was terrifying!",
     "user_id": 1
+  },
+  {
+    "title": "Monster",
+    "description": "Last night, I had a nightmare that I was being chased by a group of monsters. They were chasing me through the streets and I was terrified. I kept running, but I couldn't escape them. Eventually, they caught up to me and I woke up feeling scared and shaken.",
+    "user_id": 3
+  },
+  {
+    "title": "Dark Forest",
+    "description": "In my nightmare, I was in a dark and creepy forest. I was lost and couldn't find my way out. As I walked through the forest, I heard strange noises and saw strange shadows. I felt terrified and alone.",
+    "user_id": 4
+  },
+  {
+    "title": "Attacked!",
+    "description": "I had a nightmare that I was being attacked by a group of people. They were trying to hurt me and I was powerless to stop them. I woke up feeling panicked and vulnerable.",
+    "user_id": 5
+  },
+  {
+    "title": "Falling",
+    "description": "I had a nightmare that I was falling from a great height. I was plummeting towards the ground, feeling terrified and helpless. When I woke up, my heart was racing and I was covered in sweat.",
+    "user_id": 2
   }
 ]

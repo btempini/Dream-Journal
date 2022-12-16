@@ -1,80 +1,108 @@
 <div class="row">
-    <aside class="col-2 bodyBackground mt-3">
-        {{!-- <h2 class="spray gray">
-            my dreams:
-        </h2>
-        <ul>
-            {{#each userDreamsData.dreams as |userDreams|}}
-            <li>
-                <h4>
-                    {{dataValues.title}}
-                </h4>
-                <p>
-                    {{dataValues.createdAt}}
-                </p>
-            </li>
-            {{/each}}
-        </ul>
-        <ul>
-            {{#each userNightmareData.nightmares as |userNightmare|}}
-            <li>
-                <h4>
-                    {{dataValues.title}}
-                </h4>
-                <p>
-                    {{dataValues.createdAt}}
-                </p>
-            </li>
-            {{/each}}
-        </ul> --}}
-    </aside>
-    <section class="col-8 bodyBackground border-left border-right mt-3">
-        <h2 class="spray gray">
-            new post:
-        </h2>
-        <form>
-            <div class="form-group row">
-                <label for="title" class="col-sm-2 col-form-label">dream title:</label>
-                <div class="col-sm-10">
-                    <input id="title-input" type="text" class="form-control" id="text" placeholder="enter title">
-                </div>
+  <aside class="col-2 bodyBackground mt-3">
+    <h2 class="spray gray">
+      my dreams:
+    </h2>
+    <ul>
+      {{#each userDreamsData as |userDreams|}}
+        <li>
+          <h4>
+            {{dataValues.title}}
+          </h4>
+          <p>
+            {{dataValues.createdAt}}
+          </p>
+        </li>
+      {{/each}}
+    </ul>
+    <ul>
+      {{#each userNightmareData.dataValues.nightmares as |userNightmare|}}
+        <li>
+          <h4>
+            {{dataValues.title}}
+          </h4>
+          <p>
+            {{dataValues.createdAt}}
+          </p>
+        </li>
+      {{/each}}
+    </ul>
+  </aside>
+  <section class="col-8 bodyBackground border-left border-right mt-3">
+    <h2 class="spray gray">
+      new post:
+    </h2>
+    <form>
+      <div class="form-group row">
+        <label for="title" class="col-sm-2 col-form-label">dream title:</label>
+        <div class="col-sm-10">
+          <input
+            id="title-input"
+            type="text"
+            class="form-control"
+            id="text"
+            placeholder="enter title"
+          />
+        </div>
+      </div>
+      <div class="form-group row">
+        <label
+          for="description"
+          class="col-sm-2 col-form-label"
+        >description:</label>
+        <div class="col-sm-10">
+          <input
+            id="description-input"
+            type="textarea"
+            class="form-control"
+            id="description"
+            placeholder="enter description"
+          />
+        </div>
+      </div>
+      <fieldset class="form-group">
+        <div class="row">
+          <legend class="col-form-label col-sm-2 pt-0">dream type:</legend>
+          <div class="col-sm-10">
+            <div class="form-check">
+              <input
+                id="dream"
+                class="form-check-input"
+                type="radio"
+                name="gridRadios"
+                id="gridRadios1"
+                value="option1"
+              />
+              <label class="form-check-label" for="gridRadios1">
+                dream?
+              </label>
             </div>
-            <div class="form-group row">
-                <label for="description" class="col-sm-2 col-form-label">description:</label>
-                <div class="col-sm-10">
-                    <input id="description-input" type="textarea" class="form-control" id="description" placeholder="enter description">
-                </div>
+            <div class="form-check">
+              <input
+                id="nightmare"
+                class="form-check-input"
+                type="radio"
+                name="gridRadios"
+                id="gridRadios2"
+                value="option2"
+              />
+              <label class="form-check-label" for="gridRadios2">
+                or nightmare?
+              </label>
             </div>
-            <fieldset class="form-group">
-                <div class="row">
-                    <legend class="col-form-label col-sm-2 pt-0">dream type:</legend>
-                    <div class="col-sm-10">
-                        <div class="form-check">
-                            <input id="dream" class="form-check-input" type="radio" name="gridRadios" id="gridRadios1"
-                                value="option1">
-                            <label class="form-check-label" for="gridRadios1">
-                                dream?
-                            </label>
-                        </div>
-                        <div class="form-check">
-                            <input id="nightmare" class="form-check-input" type="radio" name="gridRadios" id="gridRadios2"
-                                value="option2">
-                            <label class="form-check-label" for="gridRadios2">
-                                or nightmare?
-                            </label>
-                        </div>
-                    </div>
-                </div>
-            </fieldset>
-            <div class="form-group row">
-                <div class="col-sm-10">
-                    <button id="postBtn" type="submit" class="btn btn-primary">drop a dream in the stream</button>
-                </div>
-            </div>
-        </form>
-    </section>
-    <aside class="col-2 mt-3">
-        {{!-- <h2 class="spray gray">
+          </div>
+        </div>
+      </fieldset>
+      <div class="form-group row">
+        <div class="col-sm-10">
+          <button id="postBtn" type="submit" class="btn btn-primary">drop a
+            dream in the stream</button>
+        </div>
+      </div>
+    </form>
+  </section>
+  <aside class="col-2 mt-3">
+    {{!-- <h2 class="spray gray">
             the stream:
         </h2>
         <ul>
@@ -86,7 +114,7 @@
             </li>
             {{/each}}
         </ul> --}}
-    </aside>
+  </aside>
 </div>
 
 <script src="/js/post.js"></script>

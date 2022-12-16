@@ -3,25 +3,27 @@
     <h2 class="spray gray">
       my dreams:
     </h2>
-      <ul>
-        {{#each userDreamsData as |userDreams|}}
-          <li class="item">
-            <h4>
-              {{userDreams.title}}
-            </h4>
-          </li>
-        {{/each}}
-      </ul>
-
-      <ul>
-        {{#each userNightmareData as |userNightmare|}}
-          <li class="item">
-            <h4>
-              {{userDreams.title}}
-            </h4>
-          </li>
-        {{/each}}
-      </ul>
+    <ul>
+      {{#each userDreamsData.dataValues.dreams as |userDreams|}}
+        <li class="item">
+          <h4>
+            {{dataValues.title}}
+          </h4>
+        </li>
+      {{/each}}
+    </ul>
+    <h2 class="spray gray">
+      my nightmares:
+    </h2>
+    <ul>
+      {{#each userNightmareData.dataValues.nightmares as |userNightmare|}}
+        <li class="item">
+          <h4>
+            {{dataValues.title}}
+          </h4>
+        </li>
+      {{/each}}
+    </ul>
   </aside>
   <section class="col-8 bodyBackground border-left border-right mt-3 box">
     <h2 class="spray gray">
