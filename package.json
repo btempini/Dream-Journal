@@ -21,6 +21,7 @@
   },
   "homepage": "https://github.com/btempini/Dream-Journal#readme",
   "dependencies": {
+    "animejs": "^3.2.1",
     "bcrypt": "^5.1.0",
     "connect-session-sequelize": "^7.1.5",
     "dotenv": "^16.0.3",
@@ -34,7 +35,7 @@
   "devDependencies": {
     "eslint": "^7.12.1",
     "eslint-config-prettier": "^6.15.0",
-    "prettier": "^2.1.2",
-    "nodemon": "^2.0.20"
+    "nodemon": "^2.0.20",
+    "prettier": "^2.1.2"
   }
 }
