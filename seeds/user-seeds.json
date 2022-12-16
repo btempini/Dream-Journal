@@ -33,5 +33,12 @@
     "email": "mramazant@gmail.com",
     "username": "ramos",
     "password": "guest1234"
+  },
+  {
+    "first_name": "Marcelo",
+    "last_name": "Perez",
+    "email": "mperez@gmail.com",
+    "username": "marcello",
+    "password": "guest1234"
   }
 ]
