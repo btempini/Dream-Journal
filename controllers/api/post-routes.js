@@ -2,7 +2,15 @@ const router = require("express").Router();
 const { Nightmare, User, Dream } = require("../../models");
 
 router.get("/", async (req, res) => {
-  res.render("postPage");
+  const userDreamsData = await User.findOne({
+    where: { id: req.session.user_id },
+    include: [{ model: Dream }],
+  });
+  const userNightmareData = await User.findOne({
+    where: { id: req.session.user_id },
+    include: [{ model: Nightmare }],
+  });
+  res.render("postPage", userDreamsData, userNightmareData);
 });
 
 //If user checks dream, else if user checks nightmare
