@@ -1,41 +1,35 @@
 <div class="row">
-  <aside class="col-2">
-    <h2 class="bodyBackground spray gray">
+  <aside class="col-2 bodyBackground mt-3">
+    <h2 class="spray gray">
       my dreams:
     </h2>
       <ul>
-        {{#each userDreamsData.dreams as |userDreams|}}
-          <li>
+        {{#each userDreamsData as |userDreams|}}
+          <li class="item">
             <h4>
-              {{dataValues.title}}
+              {{userDreams.title}}
             </h4>
-            <p>
-              {{dataValues.createdAt}}
-            </p>
           </li>
         {{/each}}
       </ul>
 
       <ul>
-        {{#each userNightmareData.nightmares as |userNightmare|}}
-          <li>
+        {{#each userNightmareData as |userNightmare|}}
+          <li class="item">
             <h4>
-              {{dataValues.title}}
+              {{userDreams.title}}
             </h4>
-            <p>
-              {{dataValues.createdAt}}
-            </p>
           </li>
         {{/each}}
       </ul>
   </aside>
-  <section class="col-8 bodyBackground border-left border-right">
+  <section class="col-8 bodyBackground border-left border-right mt-3 box">
     <h2 class="spray gray">
       recent dreams:
     </h2>
     <ul>
       {{#each dreamsData as |dream|}}
-        <li>
+        <li class="item">
           <h3>
             {{dataValues.title}}
           </h3>
@@ -53,7 +47,7 @@
     </h2>
     <ul>
       {{#each nightmareData as |nightmare|}}
-        <li>
+        <li class="item">
           <h3>
             {{dataValues.title}}
           </h3>
@@ -67,13 +61,13 @@
       {{/each}}
     </ul>
   </section>
-  <aside class="col-2 bodyBackground">
+  <aside class="col-2 bodyBackground mt-3">
     <h2 class="spray gray">
-      users:
+      the stream:
     </h2>
     <ul>
       {{#each usersData as |user|}}
-        <li>
+        <li class="item">
           <h4>
             {{dataValues.username}}
           </h4>

@@ -25,9 +25,7 @@ router.get("/", async (req, res) => {
 
 router.get("/loggedIn", async (req, res) => {
   const userDreamsData = await User.findOne({
-    where: {
-      id: req.session.user_id,
-    },
+    where: { id: req.session.user_id },
     include: [{ model: Dream }],
   });
   const userNightmareData = await User.findOne({

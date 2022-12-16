@@ -14,9 +14,7 @@
         body {
             font-family: "Rubik", sans-serif;
             background-color: #d3d3d3;
-        }
-        .wrapper {
-            min-height: calc(100vh - 50px);
+            position: relative;
         }
         .bodyBackground {
             border: 10px solid #d3d3d3;
@@ -29,28 +27,36 @@
         .gray {
             color: #4E4F50;
         }
-        .wrapper {
-            min-height: calc(100vh - 80px);
-        }
         footer {
-            height: 80px;
+            position: fixed;
+            bottom: 0;
         }
         .footerImg {
             width: 50%;
         }
+        .box {
+            overflow-y: auto;
+            height: 740px;
+        }
+        .item {
+            border: 3px solid #757779;
+            border-radius: 5px;
+            background-color: #ffffff;
+            padding-left: 10px;
+            padding-right: 10px;
+            padding-top: 10px;
+        }
     </style>
     <title>dreamStream</title>
-    <link rel="icon" type="image/x-icon" href="../Assets/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="favicon.ico">
 </head>
 
 <body>
     <header class="nav flex-row bg-primary">
         <div class="d-flex align-items-center mt-4 mb-4">
-            <a href="/" class="btn btn-primary">
-                <h1 class="ml-3 spray">
-                    dreamStream
-                </h1>
-            </a>
+            <h1 class="ml-3 spray text-white">
+                dreamStream
+            </h1>
         </div>
         <div class="d-flex align-items-center ml-3 mt-2">
             <a href="/api/post" class="btn btn-primary">drop a dream in the stream</a>
@@ -63,15 +69,15 @@
     <main class="container-fluid">
         {{{ body }}}
     </main>
-    <div class="wrapper">
-        <h1></h1>
-    </div>
     <footer class="container-fluid">
-        <div class="row imgWidth">
-            <img src="../Assets/river.gif" class="footerImg">
-            <img src="../Assets/river2.gif" class="footerImg">
+        <div class="row">
+            <img src="river.gif" class="footerImg">
+            <img src="river2.gif" class="footerImg">
         </div>
     </footer>
+    <script src="/public/js/post.js"></script>
+    <script src="/public/js/login.js"></script>
+    <script src="anime.min.js"></script>
 </body>
 
 </html>
