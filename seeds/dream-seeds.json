@@ -2,11 +2,36 @@
   {
     "title": "Skytops",
     "description": "I was in the middle of the ocean standing on one of the 3 skyscrapers. With nothing insight but the two others with me, we just off and dive into the water. Then I woke up.",
-    "user_id": 2
+    "user_id": 1
   },
   {
     "title": "Donald Trump",
     "description": "It was the best dream ever. Really, it was the best. Believe me, like I said, best dream ever.",
+    "user_id": 2
+  },
+  {
+    "title": "Highschool",
+    "description": "Last night, I had a dream that I was back in high school. I was walking through the hallways and saw all my old classmates. I felt a mix of nostalgia and anxiety in the dream.",
+    "user_id": 3
+  },
+  {
+    "title": "Beach",
+    "description": "I was on a beach with my family. We were all playing in the water and having a great time. However, suddenly a giant wave appeared and swept us all away. I woke up feeling scared and disoriented.",
+    "user_id": 4
+  },
+  {
+    "title": "City",
+    "description": "I had a dream that I was lost in a city that I had never been to before. I was trying to find my way back to my hotel, but I kept getting turned around and couldn't find my way. Eventually, I stumbled upon a friendly local who helped me find my way back.",
+    "user_id": 5
+  },
+  {
+    "title": "Superman",
+    "description": "I was flying through the air like a superhero. It was an incredible feeling of freedom and exhilaration. I flew over buildings and through clouds, feeling completely weightless and free.",
+    "user_id": 3
+  },
+  {
+    "title": "Chasers",
+    "description": "I had a dream that I was being chased by a group of unknown people. They were trying to catch me, but I was able to outrun them and escape. When I woke up, I felt relieved and grateful to have gotten away in the dream.",
     "user_id": 2
   }
 ]
