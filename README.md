@@ -12,7 +12,7 @@
 
 #### [Contributing](#contributing)
 
-#### [Features](#features)
+#### [Screenshot](#screenshot)
 
 #### [URL](#url)
 
@@ -52,12 +52,10 @@ Muhammet Toklu: https://github.com/mramazant
 
 Maximilian Gibes: https://github.com/Slimshady079
 
-## Features:
+## Screenshot:
 
-    -
-    -
-    -
+![Screenshot](./public/dreamStreamSS.png)
 
 ## URL:
 
-https://dream-stream69.herokuapp.com/
+[Deployed Site](https://dream-stream270.herokuapp.com/)
